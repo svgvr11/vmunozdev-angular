@@ -1,0 +1,48 @@
+.main-col {
+  display: flex;
+}
+
+.btn-box {
+  border-radius: 5px;
+  background-color: rgb(209, 209, 209);
+  height: 95%;
+  padding: 5px;
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.btn-box:hover {
+  background-color: #535353;
+  transform: scale(1.1);
+}
+
+.icon {
+  padding: 10px;
+  transition: .9s;
+  cursor: pointer;
+}
+
+.icon svg {
+  height: 25px;
+  width: 25px;
+  fill: #313131;
+}
+
+.icon:hover svg {
+  transition: .9s;
+  transform: scale(1.2);
+  fill: white;
+}
+
+@media (max-width: 576px) {
+  .main-col {
+    display: block;
+  }
+
+  .btn-box {
+    flex-direction: row;
+    height: auto;
+  }
+}

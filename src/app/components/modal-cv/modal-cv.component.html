@@ -1,0 +1,41 @@
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Descargar CV / Download resume</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+      </div>
+    </div>
+  </div>
+</div>-->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-10">
+        ola
+      </div>
+      <div class="col-md-2 d-flex gap-3">
+        <a class="btn btn-secondary" onclick="ga('send','event','Download','PDF', this.href]);"
+           href="https://vmunoz.dev/download/cv-vmunoz-es.pdf" download="cv-vmunoz-es.pdf"
+           target="_blank">ES</a>
+        <a class="btn btn-secondary" onclick="ga('send','event','Download','PDF', this.href]);"
+           href="https://vmunoz.dev/download/cv-vmunoz-en.pdf" download="cv-vmunoz-en.pdf"
+           target="_blank">EN</a>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<hr />
+
+<pre>{{ closeResult }}</pre>
