@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MainHeroComponent } from './components/main-hero/main-hero.component';
 import { ModalCvComponent } from './components/modal-cv/modal-cv.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    NgbTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
 body {
   background-color: rgb(233, 233, 233) !important;
   color: #313131 !important;
@@ -16,6 +18,3 @@ h1 span {
 p {
   font-family: 'Major Mono Display', monospace;
 }
-
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
