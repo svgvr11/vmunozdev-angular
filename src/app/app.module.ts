@@ -7,12 +7,14 @@ import { MainHeroComponent } from './components/main-hero/main-hero.component';
 import { ModalCvComponent } from './components/modal-cv/modal-cv.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { AccordionCvComponent } from './components/modal-cv/accordion-cv/accordion-cv.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainHeroComponent,
-    ModalCvComponent
+    ModalCvComponent,
+    AccordionCvComponent
   ],
   imports: [
     BrowserModule,

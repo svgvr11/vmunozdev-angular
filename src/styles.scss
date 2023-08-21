@@ -4,17 +4,16 @@
 body {
   background-color: rgb(233, 233, 233) !important;
   color: #313131 !important;
+  font-family: 'Fira Mono', monospace;
 }
 
 h1 {
   font-size: 3.3em;
-  font-family: 'Fira Mono', monospace;
-}
-
-h1 span {
-  font-size: 0.5em;
-}
-
-p {
-  font-family: 'Major Mono Display', monospace;
+  & span {
+    font-size: 0.5em;
+  }
+  & + p {
+    font-family: 'Major Mono Display', monospace;
+    line-height: 35px;
+  }
 }
