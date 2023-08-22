@@ -1,0 +1,139 @@
+@import "bootstrap-icons";
+
+$primary-item: #3B3E40;
+$background-item: #cccccc;
+$gray: #D5D4D5;
+$background: #2C2C2C;
+$item-non-hover: #92969A;
+
+.accordion-container {
+  min-width: 330px;
+  padding: 16px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #FCFCFC;
+  .main-item {
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+    transition: all ease-in-out 0.25s;
+    color: $item-non-hover;
+    background-color: $background-item;
+    img {
+      margin-left: auto;
+      margin-right: 25px;
+    }
+    i {
+      stroke: $item-non-hover;
+      transition: all ease-in-out 0.25s;
+    }
+    &:hover {
+      background-color: $background-item;
+      color: $primary-item;
+      i {
+        stroke: $primary-item;
+      }
+    }
+    .expand-icon {
+      width: 24px;
+      height: 24px;
+    }
+    .single-item {
+      margin-left: auto;
+    }
+  }
+  .main-item--open {
+    border-radius: 8px;
+    background-color: #a9a9a9;
+    transition: all 200ms;
+    color: whitesmoke;
+    &:hover {
+      color: whitesmoke;
+      border-radius: 8px;
+      background-color: #858585;
+      i {
+        stroke: $primary-item;
+      }
+    }
+    + ul {
+      visibility: visible;
+      max-height: 400px;
+      padding-left: 22px;
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    > .expand-icon {
+      transform: rotate(-90deg);
+    }
+  }
+  > ul {
+    max-height: 0px;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 14px;
+    opacity: 0;
+    font-size: smaller;
+    visibility: hidden;
+    transition: all ease-in-out 0.2s;
+    > li {
+      min-height: 48px;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      > p {
+        color: $item-non-hover;
+        padding: 16px 8px;
+        height: 38px;
+        line-height: 38px;
+        display: flex;
+        margin-bottom: 0;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 8px;
+      }
+      &:hover {
+        color: $primary-item;
+        font-weight: 700;
+        > p {
+          color: $primary-item;
+          background-color: $background-item;
+          width: 100%;
+        }
+      }
+    }
+    > li:last-child > .line-vertical {
+      height: 25px;
+      align-self: flex-start;
+    }
+  }
+}
+
+.line-vertical {
+  display: block;
+  background-color: $background-item;
+  width: 2px;
+  height: 48px;
+}
+
+.line-horizontal {
+  display: block;
+  background-color: $background-item;
+  height: 2px;
+  min-width: 12px;
+}
+
+
+//.nttdata-icon {
+//  &::before {
+//    content: "";
+//    padding: 1px 65px;
+//    background: url("./../../../../assets/img/NTT-Data-Logo.svg") no-repeat center;
+//    background-size: cover;
+//  }
+//}
