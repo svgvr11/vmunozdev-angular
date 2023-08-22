@@ -1,3 +1,27 @@
-//.width-custom {
-//  width: 75%;
-//}
+@import "bootstrap-icons";
+
+.info-box {
+  height: 50%;
+  padding: 15px;
+  &-border {
+    border: 5px dotted #6c6c6c;
+    font-size: 14px;
+  }
+  .icon-box {
+    display: flex;
+    align-items: center;
+    height: 50%;
+    div {
+      height: 50%;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
+  }
+}
+

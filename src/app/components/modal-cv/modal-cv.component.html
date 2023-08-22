@@ -1,15 +1,142 @@
 <div class="row">
   <div class="col-md-8">
-    <app-accordion-cv></app-accordion-cv>
+    <app-accordion-cv (clickEvent)="handleClickEvent($event)"></app-accordion-cv>
   </div>
-  <div class="col-md-4 d-flex gap-3 d-flex align-items-center text-center">
-    <h3>Descargar curriculum</h3>
-    <a class="btn btn-secondary" onclick="ga('send','event','Download','PDF', this.href);"
-       href="https://vmunoz.dev/download/cv-vmunoz-es.pdf" download="cv-vmunoz-es.pdf"
-       target="_blank">ES</a>
-    <a class="btn btn-secondary" onclick="ga('send','event','Download','PDF', this.href);"
-       href="https://vmunoz.dev/download/cv-vmunoz-en.pdf" download="cv-vmunoz-en.pdf"
-       target="_blank">EN</a>
+  <div class="col-md-4">
+    <div class="info-box info-box-border d-flex justify-content-center align-items-center" *ngIf="defaultInfo">
+      <p>
+        Select any option
+      </p>
+    </div>
+    <div class="info-box info-box-border" *ngIf="nttBci">
+      <div class="icon-box">
+        <div>
+          <img src="{{urlNttDataLogo}}" alt="nttdata icon">
+        </div>
+        <div>
+          <img src="{{urlBciWholesaleInvestLogo}}" alt="bci w&ib logo">
+        </div>
+      </div>
+      <p>
+        Front End Web Developer at BCI Bank, working in project BCI 360 Connect, Wholesale & Investment
+        Banking area.
+      </p>
+    </div>
+    <div class="info-box info-box-border" *ngIf="nttClinica1">
+      <div class="icon-box">
+        <div>
+          <img src="{{urlNttDataLogo}}" alt="nttdata icon">
+        </div>
+        <div>
+          <img src="{{urlClinicaLogo}}" alt="clinica alemana logo">
+        </div>
+      </div>
+      <p>
+        Migration of web components from Storybook to Angular Components. Building web pages in Angular.
+        Working with the Design Experience team at Clínica Alemana.
+      </p>
+    </div>
+    <div class="info-box info-box-border" *ngIf="nttIadb">
+      <div class="icon-box">
+        <div>
+          <img src="{{urlNttDataLogo}}" alt="nttdata icon">
+        </div>
+        <div>
+          <img src="{{urlIdbLogo}}" alt="Idb logo">
+        </div>
+      </div>
+      <p>
+        Building web pages in Angular and Kendo UI for a project called ‘Cambio Look & Feel’ in the APC
+        service for the Inter-American Development Bank.
+      </p>
+    </div>
+    <div class="info-box info-box-border" *ngIf="nttAvangrid">
+      <div class="icon-box">
+        <div>
+          <img src="{{urlNttDataLogo}}" alt="nttdata icon">
+        </div>
+        <div>
+          <img src="{{urlAvangridLogo}}" alt="Avangrid logo">
+        </div>
+      </div>
+      <p>
+        Solving visual and structure problems involved in the migration of nine websites from IBM WebSphere
+        to Liferay CMS.
+      </p>
+    </div>
+    <div class="info-box info-box-border" *ngIf="nttSantander">
+      <div class="icon-box">
+        <div>
+          <img src="{{urlNttDataLogo}}" alt="nttdata icon">
+        </div>
+        <div>
+          <img src="{{urlSantanderAmLogo}}" alt="Santander Asset Management Logo">
+        </div>
+      </div>
+      <p>
+        Developing a new web site to Santander Asset Management using Liferay 7.2.
+      </p>
+    </div>
+    <div class="info-box info-box-border" *ngIf="nttClinica2">
+      <div class="icon-box">
+        <div>
+          <img src="{{urlNttDataLogo}}" alt="nttdata icon">
+        </div>
+        <div>
+          <img src="{{urlClinicaLogo}}" alt="Clinica Alemana Logo">
+        </div>
+      </div>
+      <p>
+        I provided support in prototyping for a team involved in restructuring modules such as Dentistry and Oncology.
+      </p>
+    </div>
+    <div class="info-box info-box-border" *ngIf="nttMovistar">
+      <div class="icon-box">
+        <div>
+          <img src="{{urlNttDataLogo}}" alt="nttdata icon">
+        </div>
+        <div>
+          <img src="{{urlMovistarEmpresasLogo}}" alt="Movistar Empresas Logo">
+        </div>
+      </div>
+      <p>
+        Project focused on the 'Pagos' module for Movistar Empresas, encompassing validations, prototyping guidelines, proper utilization of stylesheets, service creation, and front-end data implementation.
+      </p>
+    </div>
+    <div class="info-box info-box-border d-flex justify-content-center align-items-center" *ngIf="freelance">
+<!--      <div class="icon-box">-->
+<!--        <div>-->
+<!--          <img src="{{urlNttDataLogo}}" alt="nttdata icon">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <img src="{{urlMovistarEmpresasLogo}}" alt="Movistar Empresas Logo">-->
+<!--        </div>-->
+<!--      </div>-->
+      <p>
+        Independent Web Developer. Creating websites for small-scale clients predominantly using Wordpress.
+      </p>
+    </div>
+    <div class="info-box info-box-border d-flex justify-content-center align-items-center" *ngIf="educationInacap">
+      <!--      <div class="icon-box">-->
+      <!--        <div>-->
+      <!--          <img src="{{urlNttDataLogo}}" alt="nttdata icon">-->
+      <!--        </div>-->
+      <!--        <div>-->
+      <!--          <img src="{{urlMovistarEmpresasLogo}}" alt="Movistar Empresas Logo">-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <p>
+        Graduated from Programmer Analyst.
+      </p>
+    </div>
+    <div class="info-box d-flex d-flex gap-3 justify-content-around align-items-center text-center">
+      <a class="btn btn-secondary" onclick="ga('send','event','Download','PDF', this.href);"
+         href="https://vmunoz.dev/download/cv-vmunoz-es.pdf" download="cv-vmunoz-es.pdf"
+         target="_blank"><i class="bi bi-file-earmark-arrow-down"></i> ES</a>
+      <a class="btn btn-secondary" onclick="ga('send','event','Download','PDF', this.href);"
+         href="https://vmunoz.dev/download/cv-vmunoz-en.pdf" download="cv-vmunoz-en.pdf"
+         target="_blank"><i class="bi bi-file-earmark-arrow-down-fill"></i> EN</a>
+    </div>
   </div>
 </div>
 

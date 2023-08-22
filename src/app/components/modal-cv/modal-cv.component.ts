@@ -6,6 +6,139 @@ import {Component} from '@angular/core';
   styleUrls: ['./modal-cv.component.scss']
 })
 export class ModalCvComponent {
+  // Url
+  urlNttDataLogo = '../../../assets/img/nttdata-logo.svg';
+  urlBciWholesaleInvestLogo = '../../../assets/img/bci-wsb-logo.png';
+  urlClinicaLogo = '../../../assets/img/alemana-logo.svg';
+  urlIdbLogo = '../../../assets/img/idb-logo.png';
+  urlAvangridLogo = '../../../assets/img/avangrid-logo.svg';
+  urlSantanderAmLogo = '../../../assets/img/santanderam-logo.svg';
+  urlMovistarEmpresasLogo = '../../../assets/img/movistar-empresas-logo.svg';
+  // Aparece / desaparece info
+  defaultInfo = true;
+  nttBci = false;
+  nttClinica1 = false;
+  nttIadb = false;
+  nttAvangrid = false;
+  nttSantander = false;
+  nttClinica2 = false;
+  nttMovistar = false;
+  freelance = false;
+  educationInacap = false;
   constructor() {}
+
+  handleClickEvent(clickedId: any) {
+    console.log('Click event from child component captured!', clickedId);
+    switch (clickedId) {
+      case 'nttBciWib':
+        this.defaultInfo = false;
+        this.nttBci = true;
+        this.nttClinica1 = false;
+        this.nttIadb = false;
+        this.nttAvangrid = false;
+        this.nttSantander = false;
+        this.nttClinica2 = false;
+        this.nttMovistar = false;
+        this.freelance = false;
+        this.educationInacap = false;
+        break;
+      case 'nttClinica1':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = true;
+        this.nttIadb = false;
+        this.nttAvangrid = false;
+        this.nttSantander = false;
+        this.nttClinica2 = false;
+        this.nttMovistar = false;
+        this.freelance = false;
+        this.educationInacap = false;
+        break;
+      case 'nttIadb':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = false;
+        this.nttIadb = true;
+        this.nttAvangrid = false;
+        this.nttSantander = false;
+        this.nttClinica2 = false;
+        this.nttMovistar = false;
+        this.freelance = false;
+        this.educationInacap = false;
+        break;
+      case 'nttAvangrid':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = false;
+        this.nttIadb = false;
+        this.nttAvangrid = true;
+        this.nttSantander = false;
+        this.nttClinica2 = false;
+        this.nttMovistar = false;
+        this.freelance = false;
+        this.educationInacap = false;
+        break;
+      case 'nttSantander':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = false;
+        this.nttIadb = false;
+        this.nttAvangrid = false;
+        this.nttSantander = true;
+        this.nttClinica2 = false;
+        this.nttMovistar = false;
+        this.freelance = false;
+        this.educationInacap = false;
+        break;
+      case 'nttClinica2':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = false;
+        this.nttIadb = false;
+        this.nttAvangrid = false;
+        this.nttSantander = false;
+        this.nttClinica2 = true;
+        this.nttMovistar = false;
+        this.freelance = false;
+        this.educationInacap = false;
+        break;
+      case 'nttMovistar':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = false;
+        this.nttIadb = false;
+        this.nttAvangrid = false;
+        this.nttSantander = false;
+        this.nttClinica2 = false;
+        this.nttMovistar = true;
+        this.freelance = false;
+        this.educationInacap = false;
+        break;
+      case 'freelance':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = false;
+        this.nttIadb = false;
+        this.nttAvangrid = false;
+        this.nttSantander = false;
+        this.nttClinica2 = false;
+        this.nttMovistar = false;
+        this.freelance = true;
+        this.educationInacap = false;
+        break;
+      case 'educationInacap':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = false;
+        this.nttIadb = false;
+        this.nttAvangrid = false;
+        this.nttSantander = false;
+        this.nttClinica2 = false;
+        this.nttMovistar = false;
+        this.freelance = false;
+        this.educationInacap = true;
+        break;
+    }
+  }
 
 }

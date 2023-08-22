@@ -10,7 +10,8 @@ $item-non-hover: #92969A;
   min-width: 330px;
   padding: 16px;
   border-radius: 16px;
-  overflow: hidden;
+  height: 540px;
+  overflow: auto;
   background-color: #FCFCFC;
   .main-item {
     border-radius: 8px;
@@ -23,10 +24,6 @@ $item-non-hover: #92969A;
     transition: all ease-in-out 0.25s;
     color: $item-non-hover;
     background-color: $background-item;
-    img {
-      margin-left: auto;
-      margin-right: 25px;
-    }
     i {
       stroke: $item-non-hover;
       transition: all ease-in-out 0.25s;
@@ -87,6 +84,7 @@ $item-non-hover: #92969A;
       width: 100%;
       align-items: center;
       > p {
+        cursor: pointer;
         color: $item-non-hover;
         padding: 16px 8px;
         height: 38px;
@@ -133,7 +131,7 @@ $item-non-hover: #92969A;
 //  &::before {
 //    content: "";
 //    padding: 1px 65px;
-//    background: url("./../../../../assets/img/NTT-Data-Logo.svg") no-repeat center;
+//    background: url("./../../../../assets/img/nttdata-logo.svg") no-repeat center;
 //    background-size: cover;
 //  }
 //}
