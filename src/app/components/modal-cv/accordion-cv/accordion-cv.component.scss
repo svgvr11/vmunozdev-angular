@@ -19,7 +19,7 @@ $item-non-hover: #92969A;
     display: flex;
     cursor: pointer;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 8px;
     transition: all ease-in-out 0.25s;
     color: $item-non-hover;
@@ -70,9 +70,9 @@ $item-non-hover: #92969A;
     }
   }
   > ul {
-    max-height: 0px;
+    max-height: 0;
     list-style-type: none;
-    margin: 0px;
+    margin: 0;
     padding-left: 14px;
     opacity: 0;
     font-size: smaller;
@@ -86,8 +86,9 @@ $item-non-hover: #92969A;
       > p {
         cursor: pointer;
         color: $item-non-hover;
-        padding: 16px 8px;
-        height: 38px;
+        padding: 10px 8px;
+        // height: 38px;
+        height: auto;
         line-height: 38px;
         display: flex;
         margin-bottom: 0;

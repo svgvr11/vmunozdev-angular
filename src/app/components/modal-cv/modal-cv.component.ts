@@ -27,7 +27,7 @@ export class ModalCvComponent {
   educationInacap = false;
   constructor() {}
 
-  handleClickEvent(clickedId: any) {
+  handleClickEvent(clickedId: string) {
     console.log('Click event from child component captured!', clickedId);
     switch (clickedId) {
       case 'nttBciWib':
