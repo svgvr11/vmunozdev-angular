@@ -1,19 +1,39 @@
 @import "bootstrap-icons";
 
 $primary-item: #3B3E40;
-$background-item: #cccccc;
+$background-item-open: #cccccc; // Background del acordeon abierto
+$background-item-close: #a9a9a9;
 $gray: #D5D4D5;
 $background: #2C2C2C;
 $item-non-hover: #92969A;
 
 .accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   min-width: 330px;
   padding: 16px;
-  border-radius: 16px;
   height: 540px;
   overflow: auto;
-  background-color: #FCFCFC;
-  .main-item {
+  background-color: transparent;
+  .accordion-main-item {
+    .accordion-header {
+      button {
+        display: flex;
+        gap: 10px;
+        background-color: $background-item-close;
+        color: #fff;
+        box-shadow: none;
+      }
+      &.collapsed {
+        button {
+          background-color: $background-item-open;
+          color: $primary-item;
+        }
+      }
+    }
+  }
+  /*.main-item {
     border-radius: 8px;
     padding: 12px;
     display: flex;
@@ -64,69 +84,47 @@ $item-non-hover: #92969A;
       display: flex;
       align-items: center;
       flex-direction: column;
+      gap: 5px;
     }
     > .expand-icon {
       transform: rotate(-90deg);
     }
-  }
-  > ul {
-    max-height: 0;
-    list-style-type: none;
-    margin: 0;
-    padding-left: 14px;
-    opacity: 0;
-    font-size: smaller;
-    visibility: hidden;
-    transition: all ease-in-out 0.2s;
-    > li {
-      min-height: 48px;
-      display: flex;
-      width: 100%;
-      align-items: center;
-      > p {
-        cursor: pointer;
-        color: $item-non-hover;
-        padding: 10px 8px;
-        // height: 38px;
-        height: auto;
-        line-height: 38px;
+  }*/
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding-left: 0;
+      transition: all ease-in-out 0.2s;
+      li {
+        min-height: 48px;
         display: flex;
-        margin-bottom: 0;
-        align-items: center;
-        text-decoration: none;
-        border-radius: 8px;
-      }
-      &:hover {
-        color: $primary-item;
-        font-weight: 700;
-        > p {
+        width: 100%;
+        p {
+          cursor: pointer;
+          color: $item-non-hover;
+          padding: 10px 8px;
+          height: auto;
+          line-height: 25px;
+          display: flex;
+          margin-bottom: 0;
+          align-items: center;
+          text-decoration: none;
+          border-radius: 8px;
+        }
+        &:hover {
           color: $primary-item;
-          background-color: $background-item;
-          width: 100%;
+          font-weight: 700;
+          p {
+            color: $primary-item;
+            background-color: $background-item-open;
+            width: 100%;
+          }
         }
       }
     }
-    > li:last-child > .line-vertical {
-      height: 25px;
-      align-self: flex-start;
-    }
-  }
-}
 
-.line-vertical {
-  display: block;
-  background-color: $background-item;
-  width: 2px;
-  height: 48px;
 }
-
-.line-horizontal {
-  display: block;
-  background-color: $background-item;
-  height: 2px;
-  min-width: 12px;
-}
-
 
 //.nttdata-icon {
 //  &::before {

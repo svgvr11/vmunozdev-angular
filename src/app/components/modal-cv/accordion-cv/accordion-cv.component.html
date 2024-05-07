@@ -1,89 +1,108 @@
 <div class="accordion-container">
-  <div class="main-item  main-item--open">
-    <i class="bi bi-code-slash"></i>
-    NTT Data (dec. 2020 - mar. 2024)
-    <i class="bi bi-arrow-right expand-icon single-item"></i>
-  </div>
-  <ul class="mb-2">
-    <li>
-      <div class="line-vertical"></div>
-      <div class="line-horizontal"></div>
-      <p id="nttBciWib" (click)="optionSelected($event)">
-        <span class="fw-bolder">(dec.2020 - jun.2021)</span>&nbsp;BCI W&IB | Angular Developer
-      </p>
-    </li>
-    <li>
-      <div class="line-vertical"></div>
-      <div class="line-horizontal"></div>
-      <p id="nttClinica1" (click)="optionSelected($event)">
-        <span class="fw-bolder">(jun.2021 - nov.2021)</span>&nbsp;Clínica Alemana | Angular UI Developer
-      </p>
-    </li>
-    <li>
-      <div class="line-vertical"></div>
-      <div class="line-horizontal"></div>
-      <p id="nttIadb" (click)="optionSelected($event)">
-        <span class="fw-bolder">(dec.2021 - apr.2022)</span>&nbsp;IADB | Angular UI Developer
-      </p>
-    </li>
-    <li>
-      <div class="line-vertical"></div>
-      <div class="line-horizontal"></div>
-      <p id="nttAvangrid" (click)="optionSelected($event)">
-          <span class="fw-bolder">(apr.2022 - oct.2022)</span>&nbsp;Avangrid | CSS Specialist
-      </p>
-    </li>
-    <li>
-      <div class="line-vertical"></div>
-      <div class="line-horizontal"></div>
-      <p id="nttSantander" (click)="optionSelected($event)">
-        <span class="fw-bolder">(oct.2022 - jan.2023)</span>&nbsp;Santander Asset Management | CSS Specialist
-      </p>
-    </li>
-    <li>
-      <div class="line-vertical"></div>
-      <div class="line-horizontal"></div>
-      <p id="nttClinica2" (click)="optionSelected($event)">
-        <span class="fw-bolder">(may.2023 - may.2023)</span>&nbsp;Clínica Alemana | Angular UI Developer
-      </p>
-    </li>
-    <li>
-      <div class="line-vertical"></div>
-      <div class="line-horizontal"></div>
-      <p id="nttMovistar" (click)="optionSelected($event)">
-        <span class="fw-bolder">(jul.2023 - mar.2024)</span>&nbsp;Movistar Empresas | Angular UI Developer
-      </p>
-    </li>
-  </ul>
 
-  <div class="main-item">
-    <i class="bi bi-code-slash"></i>
-    Freelance (2018 - 2020)
-    <i class="bi bi-arrow-right expand-icon single-item"></i>
+  <div ngbAccordion>
+    <div class="accordion-main-item" ngbAccordionItem [collapsed]="false">
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>
+          <i class="bi bi-code-slash"></i>
+          NTT Data (dec. 2020 - mar. 2024)
+          <i class="bi bi-arrow-right expand-icon single-item"></i>
+        </button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            <ul class="mb-2">
+              <li>
+                <p id="nttBciWib" (click)="optionSelected($event)">
+                  <span class="fw-bolder">(dec.2020 - jun.2021)</span>&nbsp;BCI W&IB | Angular Developer
+                </p>
+              </li>
+              <li>
+                <p id="nttClinica1" (click)="optionSelected($event)">
+                  <span class="fw-bolder">(jun.2021 - nov.2021)</span>&nbsp;Clínica Alemana | Angular UI Developer
+                </p>
+              </li>
+              <li>
+                <p id="nttIadb" (click)="optionSelected($event)">
+                  <span class="fw-bolder">(dec.2021 - apr.2022)</span>&nbsp;IADB | Angular UI Developer
+                </p>
+              </li>
+              <li>
+                <p id="nttAvangrid" (click)="optionSelected($event)">
+                  <span class="fw-bolder">(apr.2022 - oct.2022)</span>&nbsp;Avangrid | CSS Specialist
+                </p>
+              </li>
+              <li>
+                <p id="nttSantander" (click)="optionSelected($event)">
+                  <span class="fw-bolder">(oct.2022 - jan.2023)</span>&nbsp;Santander Asset Management | CSS Specialist
+                </p>
+              </li>
+              <li>
+                <p id="nttClinica2" (click)="optionSelected($event)">
+                  <span class="fw-bolder">(may.2023 - may.2023)</span>&nbsp;Clínica Alemana | Angular UI Developer
+                </p>
+              </li>
+              <li>
+                <p id="nttMovistar" (click)="optionSelected($event)">
+                  <span class="fw-bolder">(jul.2023 - mar.2024)</span>&nbsp;Movistar Empresas | Angular UI Developer
+                </p>
+              </li>
+            </ul>
+          </ng-template>
+        </div>
+      </div>
+    </div>
   </div>
-  <ul class="mb-2">
-    <li>
-      <div class="line-vertical"></div>
-      <div class="line-horizontal"></div>
-      <p id="freelance" (click)="optionSelected($event)">
-        <span class="fw-bolder">(2018 - 2020)</span>&nbsp;Freelance | Web Developer
-      </p>
-    </li>
-  </ul>
 
-  <div class="main-item">
-    <i class="bi bi-book"></i>
-    Education (2023)
-    <i class="bi bi-arrow-right expand-icon single-item"></i>
+  <div class="accordion-main-item" ngbAccordion>
+    <div ngbAccordionItem [collapsed]="true">
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>
+          <i class="bi bi-code-slash"></i>
+          Freelance (2018 - 2020)
+          <i class="bi bi-arrow-right expand-icon single-item"></i>
+        </button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            <ul class="mb-2">
+              <li>
+                <p id="freelance" (click)="optionSelected($event)">
+                  <span class="fw-bolder">(2018 - 2020)</span>&nbsp;Freelance | Web Developer
+                </p>
+              </li>
+            </ul>
+          </ng-template>
+        </div>
+      </div>
+    </div>
   </div>
-  <ul class="mb-2">
-    <li>
-      <div class="line-vertical"></div>
-      <div class="line-horizontal"></div>
-      <p id="educationInacap" (click)="optionSelected($event)">
-        <span class="fw-bolder">(2018 - 2023)</span>&nbsp;Analista Programador | Universidad Tecnológica de Chile INACAP
-      </p>
-    </li>
-  </ul>
+
+  <div class="accordion-main-item" ngbAccordion>
+    <div ngbAccordionItem [collapsed]="true">
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>
+          <i class="bi bi-book"></i>
+          Education (2023)
+        </button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            <ul class="mb-2">
+              <li>
+                <p id="educationInacap" (click)="optionSelected($event)">
+                  <span class="fw-bolder">(2018 - 2023)</span>&nbsp;Analista Programador | Universidad Tecnológica de Chile INACAP
+                </p>
+              </li>
+            </ul>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
