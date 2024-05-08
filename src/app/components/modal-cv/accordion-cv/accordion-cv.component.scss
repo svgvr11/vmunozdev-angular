@@ -1,5 +1,3 @@
-@import "bootstrap-icons";
-
 $primary-item: #3B3E40;
 $background-item-open: #cccccc; // Background del acordeon abierto
 $background-item-close: #a9a9a9;
@@ -38,12 +36,16 @@ $item-non-hover: #92969A;
     margin: 0;
     padding-left: 0;
     transition: all ease-in-out 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     li {
       min-height: 48px;
       display: flex;
       width: 100%;
       border-radius: 8px;
       cursor: pointer;
+      transition: background-color 0.2s ease;
       p {
         color: $item-non-hover;
         padding: 0 10px;
@@ -51,9 +53,13 @@ $item-non-hover: #92969A;
         display: flex;
         margin-bottom: 0;
         font-size: 12px;
-        align-items: center;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        span {
+          font-weight: bold;
+        }
       }
-      transition: background-color 0.2s ease;
       &:hover {
         color: $primary-item;
         font-weight: 700;

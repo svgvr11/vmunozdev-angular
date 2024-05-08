@@ -21,6 +21,7 @@ export class AccordionCvComponent {
   }
 
   optionSelected(evt: any) {
+    evt.stopPropagation();
     const id = evt.target.id;
     this.clickEvent.emit(id);
   }
