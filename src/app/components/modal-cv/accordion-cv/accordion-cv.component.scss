@@ -18,7 +18,7 @@ $item-non-hover: #92969A;
   background-color: transparent;
   .accordion-main-item {
     .accordion-header {
-      button {
+      .accordion-button {
         display: flex;
         gap: 10px;
         background-color: $background-item-close;
@@ -26,111 +26,45 @@ $item-non-hover: #92969A;
         box-shadow: none;
       }
       &.collapsed {
-        button {
+        .accordion-button {
           background-color: $background-item-open;
           color: $primary-item;
         }
       }
     }
   }
-  /*.main-item {
-    border-radius: 8px;
-    padding: 12px;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 8px;
-    transition: all ease-in-out 0.25s;
-    color: $item-non-hover;
-    background-color: $background-item;
-    i {
-      stroke: $item-non-hover;
-      transition: all ease-in-out 0.25s;
-    }
-    &:hover {
-      background-color: $background-item;
-      color: $primary-item;
-      i {
-        stroke: $primary-item;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    transition: all ease-in-out 0.2s;
+    li {
+      min-height: 48px;
+      display: flex;
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      p {
+        color: $item-non-hover;
+        padding: 0 10px;
+        height: auto;
+        display: flex;
+        margin-bottom: 0;
+        font-size: 12px;
+        align-items: center;
       }
-    }
-    .expand-icon {
-      width: 24px;
-      height: 24px;
-    }
-    .single-item {
-      margin-left: auto;
+      transition: background-color 0.2s ease;
+      &:hover {
+        color: $primary-item;
+        font-weight: 700;
+        background-color: $background-item-open;
+        p {
+          font-size: 14px;
+          color: $primary-item;
+          width: 100%;
+        }
+      }
     }
   }
-  .main-item--open {
-    border-radius: 8px;
-    background-color: #a9a9a9;
-    transition: all 200ms;
-    color: whitesmoke;
-    &:hover {
-      color: whitesmoke;
-      border-radius: 8px;
-      background-color: #858585;
-      i {
-        stroke: $primary-item;
-      }
-    }
-    + ul {
-      visibility: visible;
-      max-height: 400px;
-      padding-left: 22px;
-      opacity: 1;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      gap: 5px;
-    }
-    > .expand-icon {
-      transform: rotate(-90deg);
-    }
-  }*/
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding-left: 0;
-      transition: all ease-in-out 0.2s;
-      li {
-        min-height: 48px;
-        display: flex;
-        width: 100%;
-        p {
-          cursor: pointer;
-          color: $item-non-hover;
-          padding: 10px 8px;
-          height: auto;
-          line-height: 25px;
-          display: flex;
-          margin-bottom: 0;
-          align-items: center;
-          text-decoration: none;
-          border-radius: 8px;
-        }
-        &:hover {
-          color: $primary-item;
-          font-weight: 700;
-          p {
-            color: $primary-item;
-            background-color: $background-item-open;
-            width: 100%;
-          }
-        }
-      }
-    }
 
 }
-
-//.nttdata-icon {
-//  &::before {
-//    content: "";
-//    padding: 1px 65px;
-//    background: url("./../../../../assets/img/nttdata-logo.svg") no-repeat center;
-//    background-size: cover;
-//  }
-//}
