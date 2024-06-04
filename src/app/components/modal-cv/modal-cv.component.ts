@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-modal-cv',
@@ -25,7 +26,8 @@ export class ModalCvComponent {
   nttMovistar = false;
   freelance = false;
   educationInacap = false;
-  constructor() {}
+
+  constructor(private http: HttpClient) {}
 
   handleClickEvent(clickedId: string) {
     console.log('Click event from child component captured!', clickedId);
@@ -139,6 +141,22 @@ export class ModalCvComponent {
         this.educationInacap = true;
         break;
     }
+  }
+
+  downloadPDF(url: string, nombreArchivo: string) {
+    this.http.get(url, { responseType: 'blob' })
+      .subscribe(
+        (data: Blob) => {
+          const archivo = new Blob([data], { type: 'application/pdf' });
+          const link = document.createElement('a');
+          link.href = window.URL.createObjectURL(archivo);
+          link.download = nombreArchivo;
+          link.click();
+        },
+        (error) => {
+          console.error('Error al descargar el archivo:', error);
+        }
+      );
   }
 
 }

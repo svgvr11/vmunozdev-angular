@@ -1,9 +1,4 @@
-$primary-item: #3B3E40;
-$background-item-open: #cccccc; // Background del acordeon abierto
-$background-item-close: #a9a9a9;
-$gray: #D5D4D5;
-$background: #2C2C2C;
-$item-non-hover: #92969A;
+@import "../../../../styles";
 
 .accordion-container {
   display: flex;
@@ -19,14 +14,14 @@ $item-non-hover: #92969A;
       .accordion-button {
         display: flex;
         gap: 10px;
-        background-color: $background-item-close;
-        color: #fff;
+        background-color: $grey-300;
+        color: $white-0;
         box-shadow: none;
       }
       &.collapsed {
         .accordion-button {
-          background-color: $background-item-open;
-          color: $primary-item;
+          background-color: $grey-0;
+          color: $grey-700;
         }
       }
     }
@@ -47,7 +42,7 @@ $item-non-hover: #92969A;
       cursor: pointer;
       transition: background-color 0.2s ease;
       p {
-        color: $item-non-hover;
+        color: $grey-200;
         padding: 0 10px;
         height: auto;
         display: flex;
@@ -61,12 +56,12 @@ $item-non-hover: #92969A;
         }
       }
       &:hover {
-        color: $primary-item;
+        color: $grey-700;
         font-weight: 700;
-        background-color: $background-item-open;
+        background-color: $grey-0;
         p {
           font-size: 14px;
-          color: $primary-item;
+          color: $grey-700;
           width: 100%;
         }
       }

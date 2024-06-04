@@ -1,13 +1,15 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
+@import 'assets/scss/_variables';
+
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: rgb(233, 233, 233);
-  color: #313131;
+  color: $grey-800;
   font-family: 'Fira Mono', monospace;
   overflow: hidden;
 }
@@ -30,7 +32,7 @@ h1 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #6c6c6c; /* Color del "pulggar" de la barra */
+  background-color: #6c6c6c; /* Color del "pulgar" de la barra */
   border-radius: 5px; /* Redondear los bordes del pulgar */
 }
 

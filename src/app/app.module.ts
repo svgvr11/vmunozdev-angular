@@ -8,6 +8,7 @@ import { ModalCvComponent } from './components/modal-cv/modal-cv.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccordionCvComponent } from './components/modal-cv/accordion-cv/accordion-cv.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AccordionCvComponent } from './components/modal-cv/accordion-cv/accordi
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    NgbTooltipModule
+    NgbTooltipModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

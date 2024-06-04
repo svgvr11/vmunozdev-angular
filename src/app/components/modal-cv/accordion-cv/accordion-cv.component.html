@@ -12,48 +12,14 @@
         <div ngbAccordionBody>
           <ng-template>
             <ul class="mb-2">
-              <li>
-                <p id="nttMovistar" (click)="optionSelected($event)">
-                  (jul.2023 - mar.2024)
-                  <span>Movistar Empresas | Angular UI Developer</span>
-                </p>
-              </li>
-              <li>
-                <p id="nttClinica2" (click)="optionSelected($event)">
-                  (may.2023 - may.2023)
-                  <span>Clínica Alemana | Angular UI Developer</span>
-                </p>
-              </li>
-              <li>
-                <p id="nttSantander" (click)="optionSelected($event)">
-                  (oct.2022 - jan.2023)
-                  <span>Santander Asset Management | CSS Specialist</span>
-                </p>
-              </li>
-              <li>
-                <p id="nttAvangrid" (click)="optionSelected($event)">
-                  (apr.2022 - oct.2022)
-                  <span>Avangrid | CSS Specialist</span>
-                </p>
-              </li>
-              <li>
-                <p id="nttIadb" (click)="optionSelected($event)">
-                  (dec.2021 - apr.2022)
-                  <span>IADB | Angular UI Developer</span>
-                </p>
-              </li>
-              <li>
-                <p id="nttClinica1" (click)="optionSelected($event)">
-                  (jun.2021 - nov.2021)
-                  <span>Clínica Alemana | Angular UI Developer</span>
-                </p>
-              </li>
-              <li>
-                <p id="nttBciWib" (click)="optionSelected($event)">
-                  (dec.2020 - jun.2021)
-                  <span>BCI W&IB | Angular Developer</span>
-                </p>
-              </li>
+              <ng-container *ngFor="let element of nttWorkExpArray">
+                <li (click)="optionSelected($event)">
+                  <p id="{{element.id}}">
+                    ({{element.startDate}} - {{element.endDate}})
+                    <span>{{element.projectName}} | {{element.positionName}}</span>
+                  </p>
+                </li>
+              </ng-container>
             </ul>
           </ng-template>
         </div>
@@ -73,12 +39,14 @@
         <div ngbAccordionBody>
           <ng-template>
             <ul class="mb-2">
-              <li>
-                <p id="freelance" (click)="optionSelected($event)">
-                  (2018 - 2020)
-                  <span>Freelance | Web Developer</span>
-                </p>
-              </li>
+              <ng-container *ngFor="let element of endboxWorkExpArray">
+                <li (click)="optionSelected($event)">
+                  <p id="{{element.id}}">
+                    ({{element.startDate}} - {{element.endDate}})
+                    <span>{{element.projectName}} | {{element.positionName}}</span>
+                  </p>
+                </li>
+              </ng-container>
             </ul>
           </ng-template>
         </div>
@@ -98,12 +66,14 @@
         <div ngbAccordionBody>
           <ng-template>
             <ul class="mb-2">
-              <li>
-                <p id="educationInacap" (click)="optionSelected($event)">
-                  (2018 - 2023)
-                  <span>Analista Programador | Universidad Tecnológica de Chile INACAP</span>
-                </p>
-              </li>
+              <ng-container *ngFor="let element of educationExpArray">
+                <li (click)="optionSelected($event)">
+                  <p id="{{element.id}}">
+                    ({{element.endDate}})
+                    <span>{{element.projectName}} | {{element.positionName}}</span>
+                  </p>
+                </li>
+              </ng-container>
             </ul>
           </ng-template>
         </div>
@@ -112,4 +82,3 @@
   </div>
 
 </div>
-

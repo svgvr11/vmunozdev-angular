@@ -85,28 +85,12 @@
       </ng-container>
 
       <ng-container *ngIf="freelance">
-        <!--      <div class="icon-box">-->
-        <!--        <div>-->
-        <!--          <img src="{{urlNttDataLogo}}" alt="nttdata icon">-->
-        <!--        </div>-->
-        <!--        <div>-->
-        <!--          <img src="{{urlMovistarEmpresasLogo}}" alt="Movistar Empresas Logo">-->
-        <!--        </div>-->
-        <!--      </div>-->
         <p>
-          Independent Web Developer. Creating websites for small-scale clients predominantly using Wordpress.
+          As a freelancer, I designed, developed, and maintained WordPress websites for small contracting companies.
         </p>
       </ng-container>
 
       <ng-container *ngIf="educationInacap">
-        <!--      <div class="icon-box">-->
-        <!--        <div>-->
-        <!--          <img src="{{urlNttDataLogo}}" alt="nttdata icon">-->
-        <!--        </div>-->
-        <!--        <div>-->
-        <!--          <img src="{{urlMovistarEmpresasLogo}}" alt="Movistar Empresas Logo">-->
-        <!--        </div>-->
-        <!--      </div>-->
         <p>
           Graduated from Programmer Analyst.
         </p>
@@ -114,12 +98,12 @@
     </div>
 
     <div class="info-box-btns">
-      <button class="btn btn-secondary" onclick="ga('send','event','Download','PDF', this.href);"
-         href="https://vmunoz.dev/download/cv-vmunoz-es.pdf?version=1" download="cv-vmunoz-es.pdf"
-         target="_blank"><i class="bi bi-file-earmark-arrow-down"></i> ES</button>
-      <button class="btn btn-secondary" onclick="ga('send','event','Download','PDF', this.href);"
-         href="https://vmunoz.dev/download/cv-vmunoz-en.pdf?version=1" download="cv-vmunoz-en.pdf"
-         target="_blank"><i class="bi bi-file-earmark-arrow-down-fill"></i> EN</button>
+      <button class="btn btn-vmunoz" (click)="downloadPDF('https://vmunoz.dev/assets/pdf/cv-vmunoz-es.pdf', 'cv-vmunoz-es.pdf')">
+        <i class="bi bi-file-earmark-arrow-down"></i> ES
+      </button>
+      <button class="btn btn-vmunoz" (click)="downloadPDF('https://vmunoz.dev/assets/pdf/cv-vmunoz-en.pdf', 'cv-vmunoz-en.pdf')">
+        <i class="bi bi-file-earmark-arrow-down-fill"></i> EN
+      </button>
     </div>
   </div>
 </div>
