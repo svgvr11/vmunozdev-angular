@@ -1,46 +1,14 @@
+/** ========== BOOTSTRAP ========== */
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
-@import 'assets/scss/_variables';
+/** ========== SETTINGS ========== */
+@import 'assets/scss/settings/fonts';
+@import 'assets/scss/settings/variables';
 
-* {
-  box-sizing: border-box;
-}
+/** ========== GENERIC ========== */
+@import 'assets/scss/generic/reset';
+@import 'assets/scss/generic/scrollbar';
 
-body {
-  background-color: rgb(233, 233, 233);
-  color: $grey-800;
-  font-family: 'Fira Mono', monospace;
-  overflow: hidden;
-}
-
-h1 {
-  font-size: 3.3em;
-  & span {
-    font-size: 0.5em;
-  }
-  & + p {
-    font-family: 'Major Mono Display', monospace;
-    line-height: 35px;
-  }
-}
-
-/* Cambiar el color de la barra de desplazamiento */
-::-webkit-scrollbar {
-  width: 10px; /* Ancho de la barra de desplazamiento vertical */
-  height: 10px; /* Ancho de la barra de desplazamiento horizontal */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #6c6c6c; /* Color del "pulgar" de la barra */
-  border-radius: 5px; /* Redondear los bordes del pulgar */
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Color del fondo de la barra */
-}
-
-/* Cambiar el color cuando el usuario interactúa con la barra de desplazamiento */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #313131; /* Color del pulgar en estado hover */
-}
+/** ========== COMPONENTS ========== */
+@import 'assets/scss/components/buttons';

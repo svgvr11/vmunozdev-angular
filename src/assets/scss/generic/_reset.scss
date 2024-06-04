@@ -1,0 +1,13 @@
+@import "../settings/variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white-150;
+  color: $grey-800;
+  font-family: $font-fira-mono;
+  overflow: hidden;
+}
+

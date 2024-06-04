@@ -1,0 +1,9 @@
+@import "../settings/variables";
+
+.btn-vmunoz {
+  background-color: $grey-200;
+  color: $white-0;
+  &:hover {
+    background-color: darken($grey-200, 10%)
+  }
+}

@@ -1,7 +1,17 @@
 @import "src/styles";
 
-.main-col {
-  display: flex;
+.main-header {
+  h1 {
+    font-size: 3.3em;
+    font-weight: lighter;
+    & span {
+      font-size: 0.5em;
+    }
+  }
+  p {
+    line-height: 35px;
+    font-family: $font-major-mono-display;
+  }
 }
 
 .btn-icon-box {
@@ -40,7 +50,7 @@
     display: block;
   }
 
-  .btn-box {
+  .btn-icon-box {
     flex-direction: row;
     height: auto;
   }
