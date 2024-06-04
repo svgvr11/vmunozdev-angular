@@ -49,14 +49,14 @@ export class AccordionCvComponent implements OnInit {
       startDate: 'Jun 2021',
       endDate: 'Nov 2021',
       projectName: 'Clinica Alemana',
-      positionName: 'Angular UI Developer XDDD',
+      positionName: 'Angular UI Developer',
       id: 'nttClinica1'
     },
     {
       startDate: 'Jun 2021',
       endDate: 'Nov 2021',
       projectName: 'BCI Wholesale & Investment Banking',
-      positionName: 'Angular Developer',
+      positionName: 'Angular UI Developer',
       id: 'nttBciWib'
     },
   ];

@@ -1,4 +1,4 @@
-@import "../../../../styles";
+@import 'src/styles';
 
 .accordion-container {
   display: flex;
@@ -57,10 +57,8 @@
       }
       &:hover {
         color: $grey-700;
-        font-weight: 700;
         background-color: $grey-0;
         p {
-          font-size: 14px;
           color: $grey-700;
           width: 100%;
         }
