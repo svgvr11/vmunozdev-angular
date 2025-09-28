@@ -28,14 +28,14 @@ export class AccordionCvComponent implements OnInit {
       startDate: 'Oct 2022',
       endDate: 'Jan 2023',
       projectName: 'Santander Asset Management',
-      positionName: 'CSS Specialist',
+      positionName: 'CSS Specialist / Liferay Developer',
       id: 'nttSantander'
     },
     {
       startDate: 'Apr 2022',
       endDate: 'Oct 2022',
       projectName: 'Avangrid',
-      positionName: 'CSS Specialist',
+      positionName: 'CSS Specialist / Liferay Developer',
       id: 'nttAvangrid'
     },
     {
@@ -72,6 +72,34 @@ export class AccordionCvComponent implements OnInit {
   ];
 
   educationExpArray: ExperienceDataInterface[] = [
+    {
+      startDate: '2025',
+      endDate: '2025',
+      projectName: 'Flutter Course',
+      positionName: 'Platzi',
+      id: 'educationPlatzi2'
+    },
+    {
+      startDate: '2025',
+      endDate: '2025',
+      projectName: 'Foundations of Professional Web Development',
+      positionName: 'Platzi',
+      id: 'educationPlatzi1'
+    },
+    {
+      startDate: '2024',
+      endDate: '2024',
+      projectName: 'EF SET English Certificate 66/100 (C1 Advanced)',
+      positionName: 'EF SET',
+      id: 'educationEfSet'
+    },
+    {
+      startDate: '2021',
+      endDate: '2021',
+      projectName: 'Scrum Fundamentals Certified (SFC)',
+      positionName: 'SCRUMstudy',
+      id: 'educationScrumStudy'
+    },
     {
       startDate: '2018',
       endDate: '2023',

@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "vmunozangular:build:production"
+              "buildTarget": "vmunozangular:build:production"
             },
             "development": {
-              "browserTarget": "vmunozangular:build:development"
+              "buildTarget": "vmunozangular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "vmunozangular:build"
+            "buildTarget": "vmunozangular:build"
           }
         },
         "test": {

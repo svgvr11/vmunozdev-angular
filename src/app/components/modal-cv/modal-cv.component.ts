@@ -26,6 +26,10 @@ export class ModalCvComponent {
   nttMovistar = false;
   freelance = false;
   educationInacap = false;
+  educationScrumStudy = false;
+  educationEfSet = false;
+  educationPlatzi1 = false;
+  educationPlatzi2 = false;
 
   constructor(private http: HttpClient) {}
 
@@ -43,6 +47,10 @@ export class ModalCvComponent {
         this.nttMovistar = false;
         this.freelance = false;
         this.educationInacap = false;
+        this.educationScrumStudy = false;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = false;
         break;
       case 'nttClinica1':
         this.defaultInfo = false;
@@ -55,6 +63,10 @@ export class ModalCvComponent {
         this.nttMovistar = false;
         this.freelance = false;
         this.educationInacap = false;
+        this.educationScrumStudy = false;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = false;
         break;
       case 'nttIadb':
         this.defaultInfo = false;
@@ -67,6 +79,10 @@ export class ModalCvComponent {
         this.nttMovistar = false;
         this.freelance = false;
         this.educationInacap = false;
+        this.educationScrumStudy = false;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = false;
         break;
       case 'nttAvangrid':
         this.defaultInfo = false;
@@ -79,6 +95,10 @@ export class ModalCvComponent {
         this.nttMovistar = false;
         this.freelance = false;
         this.educationInacap = false;
+        this.educationScrumStudy = false;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = false;
         break;
       case 'nttSantander':
         this.defaultInfo = false;
@@ -91,6 +111,10 @@ export class ModalCvComponent {
         this.nttMovistar = false;
         this.freelance = false;
         this.educationInacap = false;
+        this.educationScrumStudy = false;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = false;
         break;
       case 'nttClinica2':
         this.defaultInfo = false;
@@ -103,6 +127,10 @@ export class ModalCvComponent {
         this.nttMovistar = false;
         this.freelance = false;
         this.educationInacap = false;
+        this.educationScrumStudy = false;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = false;
         break;
       case 'nttMovistar':
         this.defaultInfo = false;
@@ -115,6 +143,10 @@ export class ModalCvComponent {
         this.nttMovistar = true;
         this.freelance = false;
         this.educationInacap = false;
+        this.educationScrumStudy = false;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = false;
         break;
       case 'freelance':
         this.defaultInfo = false;
@@ -127,6 +159,10 @@ export class ModalCvComponent {
         this.nttMovistar = false;
         this.freelance = true;
         this.educationInacap = false;
+        this.educationScrumStudy = false;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = false;
         break;
       case 'educationInacap':
         this.defaultInfo = false;
@@ -139,6 +175,74 @@ export class ModalCvComponent {
         this.nttMovistar = false;
         this.freelance = false;
         this.educationInacap = true;
+        this.educationScrumStudy = false;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = false;
+        break;
+      case 'educationScrumStudy':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = false;
+        this.nttIadb = false;
+        this.nttAvangrid = false;
+        this.nttSantander = false;
+        this.nttClinica2 = false;
+        this.nttMovistar = false;
+        this.freelance = false;
+        this.educationInacap = false;
+        this.educationScrumStudy = true;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = false;
+        break;
+      case 'educationEfSet':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = false;
+        this.nttIadb = false;
+        this.nttAvangrid = false;
+        this.nttSantander = false;
+        this.nttClinica2 = false;
+        this.nttMovistar = false;
+        this.freelance = false;
+        this.educationInacap = false;
+        this.educationScrumStudy = false;
+        this.educationEfSet = true;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = false;
+        break;
+      case 'educationPlatzi1':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = false;
+        this.nttIadb = false;
+        this.nttAvangrid = false;
+        this.nttSantander = false;
+        this.nttClinica2 = false;
+        this.nttMovistar = false;
+        this.freelance = false;
+        this.educationInacap = false;
+        this.educationScrumStudy = false;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = true;
+        this.educationPlatzi2 = false;
+        break;
+      case 'educationPlatzi2':
+        this.defaultInfo = false;
+        this.nttBci = false;
+        this.nttClinica1 = false;
+        this.nttIadb = false;
+        this.nttAvangrid = false;
+        this.nttSantander = false;
+        this.nttClinica2 = false;
+        this.nttMovistar = false;
+        this.freelance = false;
+        this.educationInacap = false;
+        this.educationScrumStudy = false;
+        this.educationEfSet = false;
+        this.educationPlatzi1 = false;
+        this.educationPlatzi2 = true;
         break;
     }
   }
