@@ -39,10 +39,37 @@
         <div ngbAccordionBody>
           <ng-template>
             <ul class="mb-2">
-              <ng-container *ngFor="let element of endboxWorkExpArray">
+              <ng-container *ngFor="let element of freelanceWorkExpArray">
                 <li (click)="optionSelected($event)">
                   <p id="{{element.id}}">
                     ({{element.startDate}} - {{element.endDate}})
+                    <span>{{element.projectName}} | {{element.positionName}}</span>
+                  </p>
+                </li>
+              </ng-container>
+            </ul>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-main-item" ngbAccordion>
+    <div ngbAccordionItem [collapsed]="true">
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>
+          <i class="bi bi-book"></i>
+          Courses And Certifications
+        </button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            <ul class="mb-2">
+              <ng-container *ngFor="let element of coursesAndCertificationsExpArray">
+                <li (click)="optionSelected($event)">
+                  <p id="{{element.id}}">
+                    ({{element.endDate}})
                     <span>{{element.projectName}} | {{element.positionName}}</span>
                   </p>
                 </li>

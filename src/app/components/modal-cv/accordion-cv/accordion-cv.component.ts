@@ -61,7 +61,7 @@ export class AccordionCvComponent implements OnInit {
     },
   ];
 
-  endboxWorkExpArray: ExperienceDataInterface[] = [
+  freelanceWorkExpArray: ExperienceDataInterface[] = [
     {
       startDate: '2018',
       endDate: '2020',
@@ -72,6 +72,16 @@ export class AccordionCvComponent implements OnInit {
   ];
 
   educationExpArray: ExperienceDataInterface[] = [
+    {
+      startDate: '2018',
+      endDate: '2023',
+      projectName: 'Advanced Technical Degree in Programming Analysis',
+      positionName: 'Universidad Tecnologica de Chile INACAP',
+      id: 'educationInacap'
+    }
+  ];
+
+  coursesAndCertificationsExpArray: ExperienceDataInterface[] = [
     {
       startDate: '2025',
       endDate: '2025',
@@ -99,13 +109,6 @@ export class AccordionCvComponent implements OnInit {
       projectName: 'Scrum Fundamentals Certified (SFC)',
       positionName: 'SCRUMstudy',
       id: 'educationScrumStudy'
-    },
-    {
-      startDate: '2018',
-      endDate: '2023',
-      projectName: 'Programmer Analyst',
-      positionName: 'Universidad Tecnologica de Chile INACAP',
-      id: 'educationInacap'
     }
   ];
 
