@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
-import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MainHeroComponent } from './components/main-hero/main-hero.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [MainHeroComponent, ProjectsComponent, ExperienceComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrl: './app.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'vmunozangular';
+  readonly year = new Date().getFullYear();
 }

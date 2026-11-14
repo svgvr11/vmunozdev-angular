@@ -1,0 +1,38 @@
+<section class="projects" id="projects" aria-labelledby="projects-title">
+  <h2 id="projects-title" class="projects__title">Projects</h2>
+
+  @for (studio of studios; track studio.id) {
+    <section class="studio" [id]="studio.id" [attr.aria-labelledby]="studio.id + '-title'">
+      <header class="studio__header">
+        <h3 class="studio__name" [id]="studio.id + '-title'">{{ studio.name }}</h3>
+        <p class="studio__description">{{ studio.description }}</p>
+      </header>
+
+      <ul class="studio__grid">
+        @for (project of studio.projects; track project.url) {
+          <li>
+            <article class="project">
+              <span class="project__mark" aria-hidden="true">{{ project.mark }}</span>
+              <h4 class="project__name">
+                <a class="project__link" [href]="project.url" target="_blank" rel="noopener">
+                  {{ project.name }}
+                </a>
+              </h4>
+              <p class="project__description">{{ project.description }}</p>
+              <ul class="project__tags" aria-label="Tags">
+                @for (tag of project.tags; track tag) {
+                  <li>{{ tag }}</li>
+                }
+              </ul>
+              <p class="project__url">
+                {{ host(project.url) }}
+                <app-icon name="arrowUpRight" />
+                <span class="visually-hidden">(opens in a new tab)</span>
+              </p>
+            </article>
+          </li>
+        }
+      </ul>
+    </section>
+  }
+</section>

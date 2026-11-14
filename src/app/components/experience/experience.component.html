@@ -1,0 +1,64 @@
+<section class="experience" id="experience" aria-labelledby="experience-title">
+  <div class="experience__header">
+    <h2 id="experience-title" class="experience__title">Experience</h2>
+    <nav class="experience__toc" aria-label="Experience sections">
+      @for (group of groups; track group.id) {
+        <a [href]="'#' + group.id">{{ group.heading }}</a>
+      }
+    </nav>
+  </div>
+
+  @for (group of groups; track group.id) {
+    <section class="group" [id]="group.id" [attr.aria-labelledby]="group.id + '-title'">
+      <header class="group__header">
+        <span class="group__icon"><app-icon [name]="group.icon" /></span>
+        <div>
+          <h3 class="group__title" [id]="group.id + '-title'">{{ group.heading }}</h3>
+          @if (group.period) {
+            <p class="group__period">{{ group.period }}</p>
+          }
+        </div>
+        @if (group.logo; as logo) {
+          <span class="logo logo--group">
+            <img [ngSrc]="logo.src" [alt]="logo.alt" [width]="logo.width" [height]="logo.height" />
+          </span>
+        }
+      </header>
+
+      <ol class="timeline">
+        @for (entry of group.entries; track $index) {
+          <li class="entry">
+            <article>
+              <p class="entry__period"><time [attr.datetime]="entry.datetime">{{ entry.period }}</time></p>
+              <div class="entry__head">
+                <div>
+                  <h4 class="entry__title">{{ entry.title }}</h4>
+                  <p class="entry__subtitle">{{ entry.subtitle }}</p>
+                </div>
+                @if (entry.logo; as logo) {
+                  <span class="logo">
+                    <img [ngSrc]="logo.src" [alt]="logo.alt" [width]="logo.width" [height]="logo.height" />
+                  </span>
+                }
+              </div>
+              <p class="entry__description">{{ entry.description }}</p>
+            </article>
+          </li>
+        }
+      </ol>
+    </section>
+  }
+
+  <aside class="cv-cta" aria-labelledby="cv-cta-title">
+    <h2 id="cv-cta-title" class="cv-cta__title">Want the full picture?</h2>
+    <p>Download my resume as PDF.</p>
+    <div class="cv-cta__actions">
+      @for (cv of cvFiles; track cv.lang) {
+        <a class="btn btn--primary" [href]="cv.href" [download]="cv.filename" [attr.hreflang]="cv.lang" type="application/pdf">
+          <app-icon name="download" />
+          {{ cv.label }}
+        </a>
+      }
+    </div>
+  </aside>
+</section>

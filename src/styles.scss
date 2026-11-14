@@ -1,14 +1,14 @@
-/** ========== BOOTSTRAP ========== */
-@import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-icons/font/bootstrap-icons.css';
+/**
+ * Global styles (ITCSS). Fonts are loaded from index.html (preconnect + inlined at build).
+ * Components must NOT @import this file: it would duplicate every rule in each component bundle.
+ */
 
 /** ========== SETTINGS ========== */
-@import 'assets/scss/settings/fonts';
-@import 'assets/scss/settings/variables';
+@use 'settings/tokens';
 
 /** ========== GENERIC ========== */
-@import 'assets/scss/generic/reset';
-@import 'assets/scss/generic/scrollbar';
+@use 'generic/reset';
+@use 'generic/scrollbar';
 
 /** ========== COMPONENTS ========== */
-@import 'assets/scss/components/buttons';
+@use 'components/buttons';

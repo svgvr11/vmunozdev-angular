@@ -1,0 +1,56 @@
+/**
+ * Design tokens exposed as CSS custom properties so every component
+ * (and dark mode) shares a single source of truth at runtime.
+ */
+:root {
+  color-scheme: light dark;
+
+  /* Colours — light */
+  --bg: #ececec;
+  --surface: #f7f7f7;
+  --surface-strong: #dcdcdc;
+  --text: #2c2c2c;
+  --text-muted: #55595c; /* ≥ 6:1 on --bg (WCAG AA) */
+  --border: #cfcfcf;
+  --focus: #526fff;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.06), 0 8px 24px rgb(0 0 0 / 0.08);
+
+  /* Typography */
+  --font-body: 'Fira Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-display: 'Major Mono Display', var(--font-body);
+
+  /* Fluid type scale (≈ 360px → 1280px) */
+  --step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.875rem);
+  --step-0: clamp(0.95rem, 0.92rem + 0.15vw, 1rem);
+  --step-1: clamp(1.1rem, 1.04rem + 0.3vw, 1.25rem);
+  --step-2: clamp(1.3rem, 1.18rem + 0.55vw, 1.6rem);
+  --step-3: clamp(1.75rem, 1.5rem + 1.1vw, 2.5rem);
+  --step-4: clamp(2.25rem, 1.75rem + 2.4vw, 3.75rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+  --space-7: 4rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+
+  /* Shape */
+  --radius: 0.375rem;
+  --radius-lg: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1c1d;
+    --surface: #232527;
+    --surface-strong: #2e3133;
+    --text: #e6e6e6;
+    --text-muted: #a6aaae;
+    --border: #3b3e40;
+    --focus: #8ea0ff;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.35);
+  }
+}

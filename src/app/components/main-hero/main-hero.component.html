@@ -1,40 +1,55 @@
-<div class="row">
-  <div class="col-md-12 vh-100 vw-100 d-flex justify-content-center align-items-center">
-    <div class="row d-flex justify-content-center">
-      <div class="col-md-12 p-5 gap-5 main-col">
-        <div class="d-flex flex-column main-header">
-          <h1><span>Hi,</span> <br>
-            I'm Victor Munoz F.
-          </h1>
-          <p>Angular \ CSS \ Ionic \ Flutter \ WordPress<br>
-            <i class="bi bi-geo-alt-fill"></i> Temuco, Chile <br>
-          2026</p>
-        </div>
-        <div class="btn-icon-box shadow">
-          <a href="https://www.instagram.com/svgvr_/" target="_blank">
-            <i class="bi bi-instagram"></i>
+<header class="hero">
+  <div class="hero__inner">
+    <div class="hero__intro">
+      <p class="hero__greeting">Hi,</p>
+      <h1 class="hero__name">I'm Victor Munoz F.</h1>
+      <p class="hero__role">Front-end developer</p>
+
+      <ul class="hero__stack" aria-label="Main technologies">
+        @for (tech of stack; track tech) {
+          <li>{{ tech }}</li>
+        }
+      </ul>
+
+      <p class="hero__location">
+        <app-icon name="location" />
+        Temuco, Chile
+      </p>
+
+      <div class="hero__actions">
+        @for (cv of cvFiles; track cv.lang) {
+          <a class="btn btn--primary" [href]="cv.href" [download]="cv.filename" [attr.hreflang]="cv.lang" type="application/pdf">
+            <app-icon name="download" />
+            {{ cv.label }}
           </a>
-          <a href="https://www.linkedin.com/in/victor-mu%C3%B1oz-f/" target="_blank">
-            <i class="bi bi-linkedin"></i>
-          </a>
-          <a href="mailto:victor@vmunoz.dev">
-            <i class="bi bi-envelope-at"></i>
-          </a>
-          <a (click)="openScrollableContent(longContent)">
-            <i class="bi bi-file-earmark-arrow-down"></i>
-          </a>
-        </div>
+        }
+        <a class="btn btn--ghost" href="#projects">
+          Projects
+          <app-icon name="arrowDown" />
+        </a>
+        <a class="btn btn--ghost" href="#experience">
+          Experience
+          <app-icon name="arrowDown" />
+        </a>
       </div>
     </div>
-  </div>
-</div>
 
-<ng-template #longContent let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">My experience</h4>
-    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    <nav class="hero__social" aria-label="Contact and social profiles">
+      <ul>
+        @for (link of links; track link.href) {
+          <li>
+            <a
+              [href]="link.href"
+              [attr.aria-label]="link.label"
+              [attr.title]="link.label"
+              [attr.target]="link.external ? '_blank' : null"
+              [attr.rel]="link.external ? 'noopener noreferrer' : null"
+            >
+              <app-icon [name]="link.icon" />
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
   </div>
-  <div class="modal-body">
-    <app-modal-cv></app-modal-cv>
-  </div>
-</ng-template>
+</header>
